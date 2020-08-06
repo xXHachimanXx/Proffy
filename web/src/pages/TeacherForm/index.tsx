@@ -24,6 +24,8 @@ function TeacherForm() {
   const [subject, setSubject] = useState('');
   const [cost, setCost] = useState('');
 
+  const history = useHistory();
+
   const [scheduleItems, setScheduleItems] = useState([{
     week_day: 0,
     from: '',
@@ -50,7 +52,11 @@ function TeacherForm() {
       cost: Number(cost), 
       schedule: scheduleItems
     })
-      .then(() => alert('Cadastro realizado com sucesso!'))
+      .then(() => {
+        alert('Cadastro realizado com sucesso!');
+
+        history.push('/'); // Redirecionar usuário para a Landing page
+      })
       .catch(err => alert('Erro no cadastro!'))
   }
 
