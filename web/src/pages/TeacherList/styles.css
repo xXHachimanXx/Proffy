@@ -31,6 +31,7 @@
         bottom: -28px;
     }
 
+    #search-teachers .select-block+.select-block,
     #search-teachers .input-block+.input-block {
         margin-top: 0;
     }
